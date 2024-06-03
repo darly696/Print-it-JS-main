@@ -230,7 +230,7 @@ header {
   background-color: #ffffff00;
   border: 3px solid #fff;
   border-radius: 100%;
-  box-shadow: 0 4px 4px rgba(245, 6, 6, 0.25);
+  box-shadow: 0 4px 4px rgba(140, 135, 135, 25%);
 }
 
 /* Fin du code CSS pour le carousel */
