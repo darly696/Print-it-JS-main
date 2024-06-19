@@ -210,11 +210,15 @@ header {
   position: absolute;
   top: 50%;
   left: 10px;
+  border: none;
+  background-color: transparent;
 }
 #banner .arrow-right {
   position: absolute;
   top: 50%;
   right: 10px;
+  border: none;
+  background-color: transparent;
 }
 
 /* Gestion des points du carrousel */
@@ -232,7 +236,9 @@ header {
   border-radius: 100%;
   box-shadow: 0 4px 4px rgba(140, 135, 135, 25%);
 }
-
+.dot_selected {
+  background-color: #fff;
+}
 /* Fin du code CSS pour le carousel */
 #banner p {
   font-family: "Roboto Slab", sans-serif;
