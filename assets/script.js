@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   //SELECTION DES ELEMENTS HTML //
-  const images = document.querySelectorAll(".banner-img");
+  const images = document.querySelector(".banner-img");
   const leftArrow = document.querySelector(".arrow-left");
   const rightArrow = document.querySelector(".arrow-right");
   const bannerText = document.querySelector("#banner p");
@@ -32,14 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //FONCTION MISE A JOUR AFFICHAGE DIAPOSITIVE //
   function updateSlide(index) {
-    //MASQUER TOUTES LES IMAGES ET REINITIALISATION DES POINTS//
-    images.forEach((image, imageIndex) => {
-      image.style.display = imageIndex === index ? "block" : "none";
-    });
-
-    //AFFICHER IMAGE INDEX ET SELECTION DU POINT CORRESPONDANT//
-    images[index].src = slides[index].image;
-    images[index].style.display = "block";
+    const bannerImg = document.querySelector(".banner-img");
+    bannerImg.src = slides[index].image;
 
     //MISE A JOUR TEXTE BANNIERE //
     bannerText.innerHTML = slides[index].tagLine;
