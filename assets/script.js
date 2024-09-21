@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //SELECTION DES ELEMENTS HTML //
   const images = document.querySelector(".banner-img");
-  const leftArrow = document.querySelector(".arrow-left");
-  const rightArrow = document.querySelector(".arrow-right");
+  const flecheGauche = document.querySelector(".fleche_gauche");
+  const flecheDroite = document.querySelector(".fleche_droite");
   const bannerText = document.querySelector("#banner p");
   const dotsContainer = document.querySelector(".dots");
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateSlide(currentSlide);
 
   //GESTION CLIC GAUCHE//
-  leftArrow.addEventListener("click", function () {
+  flecheGauche.addEventListener("click", function () {
     console.log("Clic sur la flêche gauche");
     //ALLER DIAPOSITIVE PRECEDENTE EN BOUCLE //
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //GESTION CLIC DROIT //
-  rightArrow.addEventListener("click", function () {
+  flecheDroite.addEventListener("click", function () {
     console.log("Clic sur la flêche droite");
     //ALLER DIAPOSITIVE SUIVANTE EN BOUCLE //
     currentSlide = (currentSlide + 1) % slides.length;
@@ -66,6 +66,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.createElement("button");
     button.classList.add("dot");
     button.dataset.slideIndex = index;
+
+    //AJOUT ARIA-LABEL au bouton POUR ACCESSIBILITé
+    //description pour lecteurs d écran(aria-label)
+    //creation chaîne de caractères dynamiques
+    button.setAttribute("aria-label", "Voir la diapositive ${index + 1");
 
     //GESTION CLIC SUR POINTS//
     button.addEventListener("click", function () {

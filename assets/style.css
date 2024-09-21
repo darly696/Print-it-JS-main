@@ -206,14 +206,14 @@ header {
 #banner .arrow {
   position: absolute;
 }
-#banner .arrow-left {
+#banner .fleche_gauche {
   position: absolute;
   top: 50%;
   left: 10px;
   border: none;
   background-color: transparent;
 }
-#banner .arrow-right {
+#banner .fleche_droite {
   position: absolute;
   top: 50%;
   right: 10px;
